@@ -1,0 +1,92 @@
+# File         : Makefile.top_default
+# Last Updated : Date: Tue Dec  6 15:29:10 2022
+# Abstract     : Makefile for BIST circuit.
+
+
+NC          = ncverilog +notimingcheck +access+r +loadpli1=libpli +nc64bit -ALLOWREDEFINITION -sv -l $(NCLOG)
+VCS         = vcs -full64 +notimingcheck +vcsd +vpi -PP +v2k -R -fsdb -sverilog -l $(VCSLOG)
+LINT        = nLint
+
+TARGET           = top_default
+COMMANDFILE      = $(TARGET).f
+FAULTCOMMANDFILE = FAULT_MEMORY/fault_memory.f
+SCRIPT           = $(TARGET).tcl
+FORMALSCRIPT     = $(TARGET)_fm.tcl
+
+NCLOG            = $(TARGET)_NC.log
+VCSLOG           = $(TARGET)_VCS.log
+SYNLOG           = $(TARGET)_syn.log
+FORMALLOG        = $(TARGET)_fm.log
+LINTLOG          = $(TARGET)_lint.log
+
+TMPFILE          = *.log
+
+DBFILE           = *.fsdb *.db *.sdf REPORT/*.rpt INCA_libs
+
+RM               = rm -rf
+
+ECHO             = echo
+
+INSNFCMDFILE  = $(TARGET)_INS.f
+
+INSCMDFILE  = $(TARGET)_INS_FAULT.f
+
+EXECUTED_PATH    = /home/user2/test22/test2225/exercise/exercise_5/mbistcp
+
+WORK_PATH   = /home/user2/test22/test2225/exercise/exercise_5/mbistcp
+
+
+
+INSLINTLOG       = $(TARGET)_lint_INS.log
+
+all :
+	@$(ECHO) "Usage : make -f Makefile.top_default [ top_default_tb | top_default_tb_f | evcd | dc | fm | clean | lint | top_default_tb_INS | top_default_tb_INS_f | top_default_tb_INS_nf | lint_INS ]"
+
+top_default_tb :
+	$(NC) top_default_tb.v -f $(COMMANDFILE) -clean
+
+top_default_tb_vcs :
+	$(VCS) top_default_tb.v -f $(COMMANDFILE)
+
+top_default_tb_f :
+	$(NC) top_default_tb.v -f $(COMMANDFILE) -f $(FAULTCOMMANDFILE) -clean
+
+top_default_tb_f_vcs :
+	$(VCS) top_default_tb.v -f $(COMMANDFILE) -f $(FAULTCOMMANDFILE)
+
+evcd :
+	ncverilog +access+rwc +loadpli1=libpli +define+DUMP_EVCD top_default_tb.v -f $(COMMANDFILE) -clean
+
+lint :
+	$(LINT) -2005 -sort r -f $(COMMANDFILE) -out $(LINTLOG); cat $(LINTLOG)
+
+dc :
+	$(RM) $(SYNLOG);dc_shell-xg-t -64bit -f $(SCRIPT) | tee $(SYNLOG)
+
+fm :
+	$(RM) $(FORMALLOG);fm_shell -64bit -f $(FORMALSCRIPT) | tee $(FORMALLOG)
+
+clean :
+	$(RM) $(TMPFILE) $(DBFILE)
+
+top_default_tb_INS:
+	cd $(EXECUTED_PATH) && $(NC) $(WORK_PATH)/top_default_tb_INS.v -f $(WORK_PATH)/$(INSCMDFILE) -clean
+
+top_default_tb_INS_vcs:
+	cd $(EXECUTED_PATH) && $(VCS) $(WORK_PATH)/top_default_tb_INS.v -f $(WORK_PATH)/$(INSCMDFILE)
+
+top_default_tb_INS_f:
+	cd $(EXECUTED_PATH) && $(NC) $(WORK_PATH)/top_default_tb_INS.v -f $(WORK_PATH)/$(INSCMDFILE) -f $(WORK_PATH)/$(FAULTCOMMANDFILE) -clean
+
+top_default_tb_INS_f_vcs:
+	cd $(EXECUTED_PATH) && $(VCS) $(WORK_PATH)/top_default_tb_INS.v -f $(WORK_PATH)/$(INSCMDFILE) -f $(WORK_PATH)/$(FAULTCOMMANDFILE)
+
+top_default_tb_INS_nf:
+	cd $(EXECUTED_PATH) && $(NC) $(WORK_PATH)/top_default_tb_INS.v -f $(WORK_PATH)/$(INSNFCMDFILE) -clean
+
+top_default_tb_INS_nf_vcs:
+	cd $(EXECUTED_PATH) && $(VCS) $(WORK_PATH)/top_default_tb_INS.v -f $(WORK_PATH)/$(INSNFCMDFILE) -clean
+
+lint_INS:
+	$(LINT) -2005 -sort r -f $(INSCMDFILE) -out $(INSLINTLOG) && cat $(INSLINTLOG)
+

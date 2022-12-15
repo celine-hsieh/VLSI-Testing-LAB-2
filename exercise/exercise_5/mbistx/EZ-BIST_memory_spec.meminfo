@@ -1,0 +1,15 @@
+# if the instance is the alais type , The ** is .
+[DOMAIN=top_default, cycle=100.0ns]
+     [CTR] # Hier: top
+         [SEQ] # No.= 1,InstanceNo= 1,SEQ_max_addr_size= 4096,Hier: top
+             [GROUP] # No.=1_1
+                   [SP=1_1_1, byp=no, diag=no, q_pipe=no, repair=no] RA1SHD                              top MEM
+
+###Total mbist memory instance = 1
+###Total SRAM/REGFILE = 1
+###Total SRAM_2P = 0
+###Total SRAM_DP = 0
+###Total ROM = 0
+###top_default algorithm is= (March X,SOLID)
+
+##################Not Group Memory List############################################

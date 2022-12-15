@@ -1,0 +1,140 @@
+[15:29:09]  EZ-BIST : ver. 1.0.62 build 2022.03 : (c) Copyright 2009- iSTART-Technologies. All rights reserved.
+
+[15:29:09]  [BFLParser] Load BFL file [MBIST.bfl]
+[15:29:09]  [VERILOG] Parsing Verilog files ...
+[15:29:09]  [VERILOG] Parsing Verilog files ... done (0.02 sec)
+[15:29:09]  [VERILOG] Build modules information ...
+[15:29:09]  [VERILOG] Verific build modules ...
+[15:29:09]  [VERILOG] Verific build modules ... done (0.00 sec)
+[15:29:09]  [VERILOG] Static Elaboration ...
+[15:29:09]  [VERILOG] Static Elaboration ... done (0.01 sec)
+[15:29:09]  [VERILOG] Build modules information ...
+[15:29:09]  [VERILOG] Verific build modules ...
+[15:29:09]  [VERILOG] Verific build modules ... done (0.00 sec)
+[15:29:09]  [VERILOG] Get verific builded modules ...
+[15:29:09]  [VERILOG] Get verific builded modules ... done (0.00 sec)
+[15:29:09]  [VERILOG] Modify verific builded modules ...
+[15:29:09]  [VERILOG] Modify verific builded modules ... done (0.00 sec)
+[15:29:09]  [VERILOG] Arrange verific builded modules ...
+[15:29:09]  [VERILOG] Arrange verific builded modules ... done (0.00 sec)
+[15:29:09]  [VERILOG] Build modules information ... done (0.00 sec)
+[15:29:09]  [IDENTIFY] Identify memory ...
+[15:29:10]  [IDENTIFY] Memory module: RA1SHD
+[15:29:10]  [IDENTIFY] Identify memory ... done (0.08 sec)
+[15:29:10]  [VERILOG] Organize memory module...
+[15:29:10]  [VERILOG] Organize memory module ... done (0.00 sec)
+[15:29:10]  [VERILOG] Build hierarchy information ...
+[15:29:10]  [VERILOG] Process hierarchy info (top) ...[1/2]
+[15:29:10]  [VERILOG] Process hierarchy info (RA1SHD) ...[2/2]
+[15:29:10]  [VERILOG] Build hierarchy information ... done (0.00 sec)
+[15:29:10]  [VERILOG] Organize memory module...
+[15:29:10]  [VERILOG] Organize memory module ... done (0.00 sec)
+[15:29:10]  [UDM] Export udm
+[15:29:10]  [UDM] Export udm ... done (START.udm)
+[15:29:10]  [VERILOG] Organize memory instance...
+[15:29:10]  [VERILOG] Build hierarchy of memory instances ...
+[15:29:10]  [VERILOG] Build hierarchy of memory instances ... done (0.03 sec)
+[15:29:10]  [INSTANCE] Found new instance [top MEM] of memory module [RA1SHD]
+[15:29:10]  [VERILOG] Organize memory instance ... done (0.05 sec)
+[15:29:10]  [CHECK][MODULE] Check memory module information ...
+[15:29:10]  [CHECK][MODULE] Check memory module information ... done (0.00 sec)
+[15:29:10]  [CHECK][INSTANCE] Check memory instances clock information ...
+[15:29:10]  WARNING: [CHECK][CLOCK] Clock source [top CLK1] not in recognized source list, remove source
+[15:29:10]  WARNING: [CHECK][CLOCK] Not exist clock source in clock domain [100MHz], remove domain
+[15:29:10]  [PREPARE][INSTANCE] No clock port information, create default value to instance [top MEM]
+[15:29:10]  [PREPARE][INSTANCE] Not exist controller information in instance [top MEM], create default value
+[15:29:10]  [CHECK][CONTROLLER] The clock source of BIST not specified in controller [top_default]
+[15:29:10]  [PREPARE][CONTROLLER] Set default bist_clock_source to [top MEM CLK]
+[15:29:10]  [CHECK][INSTANCE] Check memory instances clock information ... done
+[15:29:10]  [CHECK][PUBLIC] Check public specification ...
+[15:29:10]  [PREPARE][PUBLIC] Not exist fault model in public specification, create default data
+[15:29:10]  [CHECK][CONTROLLER] Check public specification ... done (0.00 sec)
+[15:29:10]  [CHECK][INSTANCE] Check memory instances information ...
+[15:29:10]  [PREPARE][GROUPING] Perform auto grouping ...
+[15:29:10]  [PREPARE][GROUPING] Perform auto grouping ... done (0.00 sec)
+[15:29:10]  [CHECK][GROUPING] top_default: seq 1, grp 1, 1 members
+[15:29:10]  [CHECK][INSTANCE] Check memory instances information ... done
+[15:29:10]  [CHECK][CONTROLLER] Check each controller specification ...
+[15:29:10]  [CHECK][BFL Embed Algorithm] Add embed algorithm from bfl algorithm block
+[15:29:10]  [PREPARE][CONTROLLER][ALGORITHM] Not found [SRAM_2P] memory instance, remove existing algorithm [March X @2P]
+[15:29:10]  [PREPARE][CONTROLLER][ALGORITHM] Not found [SRAM_DP] memory instance, remove existing algorithm [March X @DP]
+[15:29:10]  [CHECK][TESTBENCH] Check testbench [top_default_tb.v]
+[15:29:10]  [CHECK][CONTROLLER] Check each controller specification ... done (0.07 sec)
+[15:29:10]  [START] Compiling ...
+[15:29:10]  [BIST] Export BID ...
+[15:29:10]  [BIST] Export BID ... done (/home/user2/test22/test2225/exercise/exercise_5/mbistcp/EZ-BIST_project_spec.bid)
+[15:29:10]  [BIST] Export Memory Information file
+[15:29:10]  [BIST] Export Memory Information file ... done (/home/user2/test22/test2225/exercise/exercise_5/mbistcp/EZ-BIST_memory_spec.meminfo)
+[15:29:10]  [BIST] Export Memory Information file
+[15:29:10]  [BIST] Export Memory Information file ... done (/home/user2/test22/test2225/exercise/exercise_5/mbistcp/START_memory_spec.mtd)
+[15:29:10]  [BIST] Create command file ...
+[15:29:10]  [BIST] Create command file ... done (/home/user2/test22/test2225/exercise/exercise_5/mbistcp/top_default.f)
+[15:29:10]  [BIST] Create fault model command file ...
+[15:29:10]  [BIST] Create fault model command file ... done (/home/user2/test22/test2225/exercise/exercise_5/mbistcp/FAULT_MEMORY/fault_memory.f)
+[15:29:10]  [BIST] Generate memory faulty model ...
+[15:29:10]  [BIST] Generate memory faulty model ... done
+[15:29:10]  [BIST] Create BIST top file ...
+[15:29:10]  [BIST] Create BIST core ... (bist) top_default
+[15:29:10]  [BIST] Create BIST top file ... done (0.01 sec) (/home/user2/test22/test2225/exercise/exercise_5/mbistcp/top_default_top.v)
+[15:29:10]  [BIST] Create BIST core ...
+[15:29:10]  [BIST] Create BIST core ... (ctr) top_default_controller (0.07 sec)
+[15:29:10]  [BIST] Create BIST core ... (seq) [1/1] top_default_sequencer1 (SRAM/REGFILE)
+[15:29:10]  [BIST] Create BIST core ... (seq) [done] (0.03 sec)
+[15:29:10]  [BIST] Create BIST core ... (tcr) [1/1] top_default_tcr_1_1_1
+[15:29:10]  [BIST] Create BIST core ... (tcr) [done] (0.01 sec)
+[15:29:10]  [BIST] Create BIST core ... (tpg) [1/1] top_default_tpg_1_1_1 (SRAM/REGFILE)
+[15:29:10]  [BIST] Create BIST core ... (tpg) [done] (0.04 sec)
+[15:29:10]  [BIST] Create BIST core ... [done] (0.16 sec) (/home/user2/test22/test2225/exercise/exercise_5/mbistcp/top_default.v)
+[15:29:10]  [BIST] Create Waveform Alias ...
+[15:29:10]  [BIST] Create Waveform Alias ... done
+[15:29:10]  [BIST] Create Background Command ...
+[15:29:10]  [BIST] Create Background Command ... done
+[15:29:10]  [BIST] Create synthesis TCL script (/home/user2/test22/test2225/exercise/exercise_5/mbistcp/top_default.sdc)
+[15:29:10]  [BIST] Create synthesis TCL script (/home/user2/test22/test2225/exercise/exercise_5/mbistcp/top_default.tcl)
+[15:29:10]  [BIST] Create formality TCL script (/home/user2/test22/test2225/exercise/exercise_5/mbistcp/top_default_fm.tcl)
+[15:29:10]  [BIST] Create test bench (/home/user2/test22/test2225/exercise/exercise_5/mbistcp/top_default_tb.v)
+[15:29:10]  [BIST] Create Makefile ...
+[15:29:10]  [BIST] Create Makefile ... done
+[15:29:10]  [BIST] Create BIST Makefile ...
+[15:29:10]  [BIST] Create BIST Makefile ... done
+[15:29:10]  [INSERT] Perform auto insertion ...
+[15:29:10]  [VERILOG] Build modules information ...
+[15:29:10]  [VERILOG] Build modules information ... done (0.00 sec)
+[15:29:10]  [INSERT] Create inserted design [/home/user2/test22/test2225/exercise/exercise_5/mbistcp/top_INS.v]
+[15:29:10]  [INSERT] Create run file for inserted BIST simulation (/home/user2/test22/test2225/exercise/exercise_5/mbistcp/top_default_INS.f)
+[15:29:10]  [INSERT] Create inserted design [/home/user2/test22/test2225/exercise/exercise_5/mbistcp/top_INS_f.v]
+[15:29:10]  [INSERT] Create run file for inserted BIST simulation (/home/user2/test22/test2225/exercise/exercise_5/mbistcp/top_default_INS_FAULT.f)
+[15:29:10]  [INSERT] Create test bench for inserted design (/home/user2/test22/test2225/exercise/exercise_5/mbistcp/top_default_tb_INS.v)
+[15:29:10]  [BIST] Create Makefile ...
+[15:29:10]  [BIST] Create Makefile ... done
+[15:29:10]  [INSERT] Modify the Makefile for Insertion
+[15:29:10]  [INSERT]
+[15:29:10]  [INSERT] #=======================  BIST Insert Path  ========================#
+[15:29:10]  [INSERT] #                                                                   #
+[15:29:10]  [INSERT] #                      ----- Controller -----                       #
+[15:29:10]  [INSERT] #                                                                   #
+[15:29:10]  [INSERT] #  CTR(top_default) : top                                           #
+[15:29:10]  [INSERT] #                                                                   #
+[15:29:10]  [INSERT] #                      ----- Sequencer -----                        #
+[15:29:10]  [INSERT] #                                                                   #
+[15:29:10]  [INSERT] #  SEQ 1 : top                                                      #
+[15:29:10]  [INSERT] #                                                                   #
+[15:29:10]  [INSERT] #                         ----- TPG -----                           #
+[15:29:10]  [INSERT] #                                                                   #
+[15:29:10]  [INSERT] #  TPG top_default_t_1_1_1 : top   [RA1SHD] (MEM)                   #
+[15:29:10]  [INSERT] #                                                                   #
+[15:29:10]  [INSERT] #                         ----- END -----                           #
+[15:29:10]  [INSERT] #                                                                   #
+[15:29:10]  [INSERT] #===================================================================#
+[15:29:10]  [INSERT]
+[15:29:10]  [INSERT] Perform auto insertion ... done (0.03 sec)
+[15:29:10]  [BIST] Create synthesis Integration TCL script (/home/user2/test22/test2225/exercise/exercise_5/mbistcp/integ_MBIST_netlist.tcl)
+[15:29:10]  [BIST] Export Memory Information file
+[15:29:10]  [BIST] Export Memory Information file ... done (/home/user2/test22/test2225/exercise/exercise_5/mbistcp/EZ-BIST_memory_spec.meminfo)
+[15:29:10]  [BIST] Export Memory Information file
+[15:29:10]  [BIST] Export Memory Information file ... done (/home/user2/test22/test2225/exercise/exercise_5/mbistcp/START_memory_spec.mtd)
+[15:29:10]  [BIST] Export Integration file ...
+[15:29:10]  [BIST] Export Integ file ... done (/home/user2/test22/test2225/exercise/exercise_5/mbistcp/top_default_spec.integ)
+[15:29:10]  [START] Compiling ... done (0.27 sec)
+[15:29:10]  [VERILOG] All messages about verilog analyzing is in "verilog_analyze.log".
+[15:29:10]  [START] Total execution time : 0.67 sec

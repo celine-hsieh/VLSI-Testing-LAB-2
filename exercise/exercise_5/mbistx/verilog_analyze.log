@@ -1,0 +1,5 @@
+-- all messages logged in file /home/user2/test22/test2225/exercise/exercise_5/mbistx/verilog_analyze.log
+-- Parsing command file /home/user2/test22/test2225/exercise/exercise_5/top.f (VERI-1482)
+-- Analyzing Verilog file 'top.v' (VERI-1482)
+-- Analyzing Verilog file 'RA1SHD.v' (VERI-1482)
+top.v(1): INFO: compiling module 'top' (VERI-1018)

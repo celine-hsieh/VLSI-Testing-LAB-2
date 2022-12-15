@@ -1,0 +1,93 @@
+define{PUBLIC}[MC_HD]
+    set auto_group      = yes
+    set bench_separate  = no
+    set create_extra_io = no
+    set fault_free      = yes
+    set integrator_mode = yes
+    set power_limit     = 1.0 # mW
+    set top_hierarchy   = top
+    set top_module_name = top
+    set ud_memory_path  = 
+    set verilog_path    = /home/user2/test22/test2225/exercise/exercise_5/top.f
+    set work_path       = /home/user2/test22/test2225/exercise/exercise_5/mbistcp
+end_define{PUBLIC}
+
+define{clock_domain}[default]
+    set clock_cycle       = 100.0 # ns
+    set clock_source_list = top MEM CLK
+end_define{clock_domain}
+
+define{clock_domain}[100MHz]
+    set clock_cycle       = 10.0 # ns
+    set clock_source_list = top CLK1
+end_define{clock_domain}
+
+define{BIST}[top_default]
+    set STIL_test_bench           = no
+    set alias_port_name           = no
+    set asynchronous_reset        = yes
+    set background_pure_value     = no
+    set background_style          = SOLID
+    set background_bit_inverse    = no
+    set bist_clock_source         = top MEM CLK
+    set background_col_inverse    = no
+    set bist_interface            = basic
+    set algorithm_selection       = no
+    set bypass_clock              = no
+    set bypass_include_bist_pin   = no
+    set bypass_reg_sharing        = 1
+    set clock_source_switch       = no
+    set clock_within_pll          = no
+    set diagnosis_faulty_items    = algorithm, operation, element, seq_id, grp_id, address, ram_data, rom_data
+    set diagnosis_serial_test     = no
+    set specify_dt_port_value     = no
+    set diagnosis_memory_info     = no
+    set diagnosis_time_info       = no
+    set clock_source_gated        = no
+    set clock_switch_of_memory    = yes
+    set clock_function_hookup     = no
+    set parallel_on               = no
+    set pipeline_enhance          = no
+    set program_algorithm         = no
+    set reduce_address_simulation = no
+    set rom_half_access           = no
+    set rom_result_shiftout       = no
+    set specify_clock_mux         = no
+    set add_address_y             = no
+    set diagnosis_data_sharing    = no
+    
+    define{sequencer}[1]
+        set group_list   = 1
+        set memory_class = SRAM/REGFILE
+    end_define{sequencer}
+    
+    define{algorithm_embed}[1]
+        set background     = SOLID
+        set bit_inverse    = no
+        set col_inverse    = no
+        set id             = March X
+        set add_address_y  = no
+    end_define{algorithm_embed}
+    
+    define{testbench}[top_default_tb.v]
+        set export = yes
+    end_define{testbench}
+end_define{BIST}
+
+
+define{instance}[top MEM]
+    set Q_pipeline     = no
+    set activated      = yes
+    set clock_sync_mux = no
+    set diagnosis_mode = no
+    set group          = 1
+    set memory_module  = RA1SHD
+    set repair_mode    = no
+    set repair_no_rm   = no
+    set support_bypass = no
+    
+    define{clock_port}[CLK]
+        set clock_source = top MEM CLK
+        set clock_wire   = top MEM CLK
+    end_define{clock_port}
+end_define{instance}

@@ -1,0 +1,9 @@
+define XMSIMRC	( /usr/cad/cadence/XCELIUM/XCELIUM_20.09.007/tools/xcelium/files/xmsimrc, ~/.xmsimrc )
+define AMSRC	( /usr/cad/cadence/XCELIUM/XCELIUM_20.09.007/tools/xcelium/files/amsrc, ~/.amsrc )
+include ./hdlrun.var
+include ./xllibs/hdl.var
+define SNAPSHOT worklib.stimulus:v
+DEFINE RUNMODEDEFAULT 1
+DEFINE LIB_MAP ($LIB_MAP, + => worklib )
+define ELAB_SNAPSHOT
+define SNAPSHOT worklib.stimulus:v

@@ -1,0 +1,10 @@
+define(clock_domain) 
+#[format]  Domain_Name cycle: xx.xns cycle_type: xxxx path[('xx', 'xx'), ('yy', 'yy')]
+	                       default 	clock_cycle:      100.0ns	clock_type: Source	                           [('top', 'MEM', 'CLK')] 
+	                        100MHz 	clock_cycle:       10.0ns	clock_type: Source	                                 [('top', 'CLK1')] 
+end_define(clock_domain) 
+######################################################################### 
+## Output the reference data 
+######################################################################### 
+# BIST clock source 
+#          top_default = ('top', 'MEM', 'CLK') 

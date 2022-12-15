@@ -1,0 +1,89 @@
+define{OPTION}
+    set verilog_path        = /home/user2/test22/test2225/exercise/exercise_5/top.f      # /absolute path/design.f | ...
+    set user_define_memory  =                                                       # /absolute path/memory.udm | ...
+    set top_module_name     = top                                                   # design top
+    set top_hierarchy       = top                                                   # design_top sub_module_instance_name ...
+    set clock_trace         = no                                                    # yes, no (User group instances will all be un-group when setting yes)
+    set auto_group          = yes                                                   # yes, no
+    set insertion           = yes                                                   # yes, no
+    set integrator_mode     = yes                                                   # yes, no
+    set work_path           = ./mbistx                                              # ./work
+    set fault_free          = yes                                                    # yes, no
+    set parsing_mode        = RTL_only                                              # RTL_only, Netlist_only
+    set block_path          =                                                       # /absolute path/block.blockinfo | ...
+ 
+    define{CLOCK}
+        set sdc_file                =                                               # /absolute path/design.sdc
+        define{100MHz}
+            set clock_cycle         = 10.0                                          # floating point
+            set clock_source_list   = top CLK1                                      # top design1 CLK
+        end_define{100MHz}
+#        define{10MHz}
+#            set clock_cycle         = 100.0                                         # floating point
+#            set clock_source_list   = top CLK2                                      # top design2 CLK
+#        end_define{10MHz}
+    end_define{CLOCK}
+ 
+    define{GROUP}
+        set sequencer_limit = 60                                                    # integer
+        set group_limit     = 30                                                    # integer smaller than sequencer limit
+        set memory_list     =                                                       # /absolute path/design.meminfo
+        set time_hierarchy  = 1.0                                                   # 0(time) < value <1(hierarchy)
+        set lib_path        =                                                       # /absolute path/lib (Accept file dictionary)
+        set power_limit     = 1.0                                                   # mW (float bigger than 0)
+        set hierarchy_limit = 0                                                     # integer (default: 0)
+ 
+        define{PHYSICAL}
+            set enable_physical         = no                                        # yes, no
+            set physical_location_file  =                                           # /absolute path/design.def
+            set distance_limit          = 1
+            set phycical_logical        = 0.5
+        end_define{PHYSICAL}
+    end_define{GROUP}
+end_define{OPTION}
+ 
+define{BIST}
+    set STIL_test_bench             = no                                            # yes, no
+    set WGL_test_bench              = no                                            # yes, no
+    set asynchronous_reset          = yes                                           # yes, no
+    set bist_interface              = basic                                      # minibist, basic, ieee1149.1, ieee1500
+    set add_address_y              = no                                             # yes, no
+    set program_algorithm           = no                                            # yes, no
+    set algorithm_selection         = no                                            # no, outside, scan
+    set background_style            = SOLID                                         # SOLID, 5A
+    set background_bit_inverse      = no                                            # yes, no
+    set background_col_inverse      = no                                            # yes, no
+    set bypass_support              = no                                            # no, wire, reg
+    set bypass_clock                = no                                            # yes, no
+    set bypass_reg_sharing          = 1                                             # 1 ~ 1024
+    set clock_function_hookup       = no                                            # yes, no
+    set clock_switch_of_memory      = yes                                           # yes, no
+    set clock_source_switch         = no                                            # yes, no
+    set clock_within_pll            = no                                            # yes, no
+    set diagnosis_support           = no                                            # yes, no
+    set diagnosis_data_sharing      = no                                            # yes, no
+    set diagnosis_memory_info       = no                                            # yes, no
+    set diagnosis_time_info         = no                                            # yes, no
+    set diagnosis_faulty_items      = algorithm, operation, element, seq_id, grp_id, address, ram_data, rom_data    # algorithm, operation, element, seq_id, grp_id, address, ram_data, rom_data
+    set parallel_on                 = no                                            # yes, no
+    set reduce_address_simulation   = no                                            # yes, no
+    set rom_result_shiftout         = no                                            # yes, no
+    set Q_pipeline                  = no                                            # yes, no
+    set skip_bist_path              = 
+ 
+    define{algorithm}
+        set single_port     = March X                                              # March C-, March LR...
+        set two_port        = March X @2P                                          # March C- @2P...
+        set dual_port       = March X @DP                                          # March C- @DP...
+    end_define{algorithm}
+ 
+    define{algorithm_programmable}
+        set support_elements    = ra, wa, rawb, rawbrb, rarawbrb
+        set max_prog_element    = 1
+    end_define{algorithm_programmable}
+end_define{BIST}
+ 
+# Built-in Test Algorithms
+# Single Port : March CW (part 1), March CW (part 2), March 33N, March C+, March C, March C-, Ext March C-, MOVI, MATS++, March A, March B, March M, March X, March Y, March LR, March 17N, March 19N, March Mdsn1 (part 1), March Mdsn1 (part 2), March SSSc, Non-March BM, March RP
+# Two Ports   : March Weak WL @2P, March CW (part 1) @2P, March CW (part 2) @2P, Ext March C- @2P, MOVI @2P, MATS++ @2P, March A @2P, March B @2P, March X @2P, March Y @2P, March LR @2P, March C- @2P, March C+ @2P, March C @2P, March 17N @2P, March 19N @2P, March 33N @2P, Non-March BM @2P
+# Dual Ports  : March Weak WL @DP, March CW (part 1) @DP, March CW (part 2) @DP, Ext March C- @DP, MOVI @DP, MATS++ @DP, March A @DP, March B @DP, March X @DP, March Y @DP, March LR @DP, March C- @DP, March C+ @DP, March C @DP, March 17N @DP, March 19N @DP, March 33N @DP, Non-March BM @DP, March A2PF-M

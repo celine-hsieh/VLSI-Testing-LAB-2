@@ -1,0 +1,113 @@
+define{module}[RA1SHD]
+    set address_count = 4096
+    set column_width  = 4
+    set data_width    = 32
+    set doc           = Artisan, Synchronous Single-Port Ram
+    set memory_class  = SRAM/REGFILE
+    set power         = 0.0 # mW
+    set read_latency  = 1
+    set write_latency = 0
+    
+    define{port}[porta]
+        set io_list  = A, CEN, CLK, D, OEN, Q, WEN
+        set property = read_write
+    end_define{port}
+    
+    define{io}[A]
+        set alias     = A
+        set hold_time = 0 # ns
+        set mux       = yes
+        set property  = ADDR
+        set type      = input
+        set width     = 12
+    end_define{io}
+    
+    define{io}[CEN]
+        set active    = 0
+        set alias     = CEN
+        set hold_time = 0 # ns
+        set mux       = yes
+        set property  = CS
+        set type      = input
+        set width     = 1
+    end_define{io}
+    
+    define{io}[CLK]
+        set active    = 1
+        set alias     = CLK
+        set hold_time = 0 # ns
+        set mux       = no
+        set property  = CLK
+        set type      = input
+        set width     = 1
+    end_define{io}
+    
+    define{io}[D]
+        set alias     = D
+        set hold_time = 0 # ns
+        set mux       = yes
+        set property  = D
+        set type      = input
+        set width     = 32
+    end_define{io}
+    
+    define{io}[OEN]
+        set active    = 0
+        set alias     = OEN
+        set hold_time = 0 # ns
+        set mux       = yes
+        set property  = OE
+        set type      = input
+        set width     = 1
+    end_define{io}
+    
+    define{io}[Q]
+        set alias     = Q
+        set hold_time = 0 # ns
+        set mux       = no
+        set property  = Q
+        set type      = output
+        set width     = 32
+    end_define{io}
+    
+    define{io}[WEN]
+        set active    = 0
+        set alias     = WEN
+        set hold_time = 0 # ns
+        set mux       = yes
+        set property  = WE
+        set type      = input
+        set width     = 1
+    end_define{io}
+    
+    define{command}[nop]
+        set CS = 1
+        set OE = 1
+        set WE = 1
+    end_define{command}
+    
+    define{command}[read]
+        set CS = 0
+        set OE = 0
+        set WE = 1
+    end_define{command}
+    
+    define{command}[write]
+        set CS = 0
+        set OE = 1
+        set WE = 0
+    end_define{command}
+    
+    define{task}[n]
+        set operation = nop
+    end_define{task}
+    
+    define{task}[r]
+        set operation = read
+    end_define{task}
+    
+    define{task}[w]
+        set operation = write
+    end_define{task}
+end_define{module}
+

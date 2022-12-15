@@ -1,0 +1,264 @@
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+  <title>
+  Datasheet of Memory BIST
+  </title>
+</head>
+<body bgcolor ='#E0E0E0'>
+<h1>
+Datasheet of Memory BIST
+</h1>
+<p>
+Revision:
+<tt>$Date: 2011/10 $ </tt>
+<br>
+Created Date:
+<tt>Date: Tue Dec  6 15:43:39 2022</tt>
+</p>
+
+<h2> Project Name: </h2>
+<h3><font color=darkorange> top_default </font></h3>
+
+<h2> Description: </h2>
+
+<p>
+The memory BIST (Built-In-Self-Test), or MBIST, is a
+technology-independent, synthesizable core for memory testing,
+specifically designed for highly flexibility and scalability.  It
+features programmability of the test algorithms for various test
+requirement, and supports robust built-in test algorithms for
+comprehensive fault models, such as stuck-at, stuck-open,
+transition, address decoder and coupling faults, including
+bit-oriented and word-oriented ones.
+<p>
+When testing multiple memory cores
+in parallel, the MBIST can manage the test scheduling and
+test partition to achieve the optimized test time and area
+overhead.
+
+
+</p>
+
+<h2> Features: </h2>
+
+<p>
+<ul>
+<li> Low cost memory BIST core for SRAMs
+<li> Support all popular memory architectures, including
+  <ul>
+  <li> synchronous/asynchronous memories
+  <li> single-port/dual-port/multiple-port SRAM
+  <li> two-port/n-read-m-write register files
+  <li> read only memory (ROM)
+  <li> flexible automation engine for memory BIST generation
+  </ul>
+
+<li> Compliant to various memory compilers
+<li> Easily adapted for custom memory architectures
+<li> Rapid development cycle for widespread memory configuration
+<li> Support parallel testing for multiple memory cores
+<li> Allow test partition and test scheduling
+<li> Synthesizable to target logic process
+<li> Support industry standard memory test algorithms
+<li> Field programmable for user-defined test algorithms
+<li> Built-in robust test algorithm for comprehensive fault
+     models of 100% coverage
+<li> Scan self-testable with high fault coverage (&gt;99%)
+</ul>
+</p>
+
+<br>
+
+<h2> Clock Information: </h2>
+<dl><h3> Clock Source Information:</h3></dl>
+<table border=1 width=80% cellspacing=2 cellpadding=2>
+<tr bgcolor=lightcyan><td> Clock Name </td><td> Clock Path </td></tr>
+<tr><td> top MEM CLK </td><td> top MEM CLK </td></tr>
+</table>
+
+<dl><h3> Clock Domain Configuration:</h3></dl>
+<table border=1 width=80% cellspacing=2 cellpadding=2>
+<tr bgcolor=lightcyan><td> Domain Name </td><td> Clock Period </td><td> Members </td></tr>
+<tr><td> default </td><td> 100.0 </td><td> top MEM CLK </td></tr>
+</table>
+
+<dl><h3> Reference Clock Source of Each Memories:</h3></dl>
+<table border=1 width=80% cellspacing=2 cellpadding=2>
+<tr bgcolor=lightcyan><td> Memory Instance </td><td> Clock Port </td><td> Clock Wire </td><td> Clock Source Name </td></tr>
+<tr><td> top MEM </td><td> CLK </td><td> top MEM CLK </td><td> top MEM CLK </td></tr>
+</table>
+<br><br>
+
+<br>
+
+<h2> Mapping Table of TPGs with Memories : </h2>
+<table border=1 width=80% cellspacing=2 cellpadding=2>
+<tr bgcolor=lightcyan><td> TPG_Module </td><td> TPG_Instance </td><td> RAM_Module </td><td> RAM_Instance </td></tr>
+<tr><td> top_default_tpg_1_1_1 </td><td> top_default_t_1_1_1 </td><td> RA1SHD </td><td> top MEM </td></tr>
+</table>
+
+<br><br>
+
+<h2> Pin Description: </h2>
+<h3>Primary Control Signals:</h3>
+<table border=1 width=80% cellspacing=2 cellpadding=2>
+<tbody>
+<tr bgcolor=royalblue>
+  <th colspan=3>
+  The Primary IOs Between BIST and ATE:
+  </th>
+</tr>
+<tr bgcolor=lightcyan>
+  <td> Name </td> <td> Type </td>
+  <td>
+  Description
+  </td>
+</tr>
+<tr>
+                                              <td> MCK </td> <td> Input </td>
+                                              <td>
+                                              Testing clock signal
+                                              </td>
+                                            </tr><tr>
+                                              <td> SCK </td> <td> Input </td>
+                                              <td>
+                                              When clock_within_pll option is turned on, the MBIST circuit will have another clock input source, SCK. This SCK signal is used to connect with ATE.
+                                              </td>
+                                            </tr><tr>
+                                              <td> SEN </td> <td> Input </td>
+                                              <td>
+                                              Serial IO enable
+                                              </td>
+                                            </tr><tr>
+                                              <td> SDO </td> <td> Output </td>
+                                              <td>
+                                              Serial data output (for diagnosis results)
+                                              </td>
+                                            </tr><tr>
+                                              <td> SDI </td> <td> Input </td>
+                                              <td>
+                                              Serial data input (for programmable test commends)
+                                              </td>
+                                            </tr></table>
+
+<dl>
+<dd> <b> IOs between TPG
+       <font color=darkorange>top_default_tpg_1_1_1</font>
+     and memory <font color=darkblue>top.MEM</font>:</b>
+  <table border=1 width=80% cellspacing=2 cellpadding=2>
+  <tr bgcolor=lightblue>
+    <th colspan=2> The IO between BIST and Memory: </th>
+  </tr>
+<tr bgcolor=lightcyan><td> BIST </td><td> Memory </td></tr>
+<tr><td> TPG_1_1_1_A_t </td><td> A </td></tr>
+<tr><td> TPG_1_1_1_CEN_t </td><td> CEN </td></tr>
+<tr><td> TPG_1_1_1_CLK_t </td><td> CLK </td></tr>
+<tr><td> TPG_1_1_1_D_t </td><td> D </td></tr>
+<tr><td> TPG_1_1_1_OEN_t </td><td> OEN </td></tr>
+<tr><td> TPG_1_1_1_Q_t </td><td> Q </td></tr>
+<tr><td> TPG_1_1_1_WEN_t </td><td> WEN </td></tr>
+  <tr bgcolor=lightblue>
+    <th colspan=2> The Normal Access IO Along the Test Collar: </th>
+  </tr>
+<tr bgcolor=lightcyan><td> Name </td><td> Type </td></tr>
+<tr><td> TPG_1_1_1_A_s </td><td> input </td></tr>
+<tr><td> TPG_1_1_1_CEN_s </td><td> input </td></tr>
+<tr><td> TPG_1_1_1_CLK_s </td><td> input </td></tr>
+<tr><td> TPG_1_1_1_D_s </td><td> input </td></tr>
+<tr><td> TPG_1_1_1_OEN_s </td><td> input </td></tr>
+<tr><td> TPG_1_1_1_Q_s </td><td> output </td></tr>
+<tr><td> TPG_1_1_1_WEN_s </td><td> input </td></tr>
+</table>
+</dl>
+
+<h2> Truth Tables: </h2>
+
+<table border=1 width=80%% cellspacing=2 cellpadding=2>
+<tr bgcolor=royalblue>
+  <td>MEN</td>
+  <td>RST</td>
+  <td>Description</td>
+</tr>
+<tr>
+  <td>0</td>
+  <td>X</td>
+  <td>Normal mode</td>
+</tr>
+<tr>
+  <td>1</td>
+  <td>1</td>
+  <td>MBIST mode</td>
+</tr>
+<tr>
+  <td>X</td>
+  <td>1->0</td>
+  <td>MBIST reset</td>
+</tr>
+</table>
+<p>
+<ul>
+<li>
+  When MEN=1, the memory BIST will start to test the memories automatically.
+  Also, the BIST will stop the test immediately when MEN=0.</ul>
+
+<p>
+
+<table border=1 width=80%% cellspacing=2 cellpadding=2>
+<tr bgcolor=royalblue>
+  <td width=20%%>MRD</td>
+  <td width=80%%>Test ready</td>
+</tr>
+<tr>
+  <td>0</td>
+  <td>Test session not finished</td>
+</tr>
+<tr>
+  <td>1</td>
+  <td>Test session finished</td>
+</tr>
+</table>
+<table border=1 width=80%% cellspacing=2 cellpadding=2>
+<tr bgcolor=royalblue>
+  <td width=20%%>MGO</td>
+  <td width=80%%>MBIST Go</td>
+</tr>
+<tr>
+  <td>0</td>
+  <td>Test failed</td>
+</tr>
+<tr>
+  <td>1</td>
+  <td>Test passed</td>
+</tr>
+</table>
+<p>
+<table border=1 width=80%% cellspacing=2 cellpadding=2>
+<tr bgcolor=royalblue>
+  <td>MRD</td>
+  <td>MGO</td>
+  <td>Description</td>
+</tr>
+<tr>
+  <td>0</td>
+  <td>1</td>
+  <td>Test session not finished, currently passed</td>
+</tr>
+<tr>
+  <td>0</td>
+  <td>0</td>
+  <td>Test session not finished, test failed</td>
+</tr>
+<tr>
+  <td>1</td>
+  <td>1</td>
+  <td>Test session finished, currently passed</td>
+</tr>
+<tr>
+  <td>1</td>
+  <td>0</td>
+  <td>Test session finished, test failed</td>
+</tr>
+</table>
+</body>
+</html>

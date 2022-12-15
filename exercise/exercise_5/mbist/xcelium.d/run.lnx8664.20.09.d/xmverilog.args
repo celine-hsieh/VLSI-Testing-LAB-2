@@ -1,0 +1,16 @@
+//
+// File created by:  xmverilog
+// Do not modify this file
+//
++notimingcheck
++access+r
++loadpli1=libpli
++nc64bit
+-ALLOWREDEFINITION
+-sv
+-l
+top_default_NC.log
+top_default_tb.v
+-f
+top_default.f
+-clean

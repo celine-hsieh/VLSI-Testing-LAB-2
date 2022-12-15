@@ -1,0 +1,23 @@
+//
+// File created by:  xmverilog
+// Do not modify this file
+//
+-XLMODE
+./xcelium.d/run.lnx8664.20.09.d
+-RUNMODE
+-ALLOWREDEFINITION
+-sv
+top_default_tb.v
+-VFILE
+/home/user2/test22/test2225/exercise/exercise_5/RA1SHD.v
+/home/user2/test22/test2225/exercise/exercise_5/mbist/top_default_top.v
+/home/user2/test22/test2225/exercise/exercise_5/mbist/top_default.v
+-CDSLIB
+./xcelium.d/run.lnx8664.20.09.d/cdsrun.lib
+-HDLVAR
+./xcelium.d/run.lnx8664.20.09.d/hdlrun.var
+-MESSAGES
+-UPDATE
+-XLLIBSTORE
+./xcelium.d/run.lnx8664.20.09.d/xllibs
+-ALLOWUNBOUND

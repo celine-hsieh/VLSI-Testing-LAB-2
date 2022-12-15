@@ -1,0 +1,157 @@
+xmverilog(64): 20.09-s007: (c) Copyright 1995-2020 Cadence Design Systems, Inc.
+TOOL:	xmverilog	20.09-s007: Started on Dec 06, 2022 at 15:18:38 CST
+ncverilog
+	+notimingcheck
+	+access+r
+	+loadpli1=libpli
+	+nc64bit
+	-ALLOWREDEFINITION
+	-sv
+	-l
+	top_default_NC.log
+	top_default_tb.v
+	-f top_default.f
+		-v
+		/home/user2/test22/test2225/exercise/exercise_5/RA1SHD.v
+		/home/user2/test22/test2225/exercise/exercise_5/mbistcp/top_default_top.v
+		/home/user2/test22/test2225/exercise/exercise_5/mbistcp/top_default.v
+	-clean
+xmverilog: *W,OPDEPRREN: Command Line Option (+nc64bit) is deprecated. Use (+xm64bit) instead.
+xmverilog: *W,NCEXDEP: Executable (ncverilog) is deprecated. Use (xmverilog) instead.
+xmverilog: *N,CLEAN: Removing existing directory ./xcelium.d.
+file: top_default_tb.v
+	module worklib.stimulus:v
+		errors: 0, warnings: 0
+file: /home/user2/test22/test2225/exercise/exercise_5/mbistcp/top_default_top.v
+	module worklib.top_default:v
+		errors: 0, warnings: 0
+	module worklib.top_default_top:v
+		errors: 0, warnings: 0
+file: /home/user2/test22/test2225/exercise/exercise_5/mbistcp/top_default.v
+	module worklib.top_default_controller:v
+		errors: 0, warnings: 0
+	module worklib.top_default_scan:v
+		errors: 0, warnings: 0
+	module worklib.top_default_sequencer1:v
+		errors: 0, warnings: 0
+	module worklib.top_default_tcr_1_1_1:v
+		errors: 0, warnings: 0
+	module worklib.top_default_tpg_1_1_1:v
+		errors: 0, warnings: 0
+	module worklib.top_default_async_pos_pulse_W1:v
+		errors: 0, warnings: 0
+	module worklib.top_default_BUFF_ASYNC_W1_D1_S0:v
+		errors: 0, warnings: 0
+	module worklib.top_default_BUFF_ASYNC_W1_D1_S1:v
+		errors: 0, warnings: 0
+	module worklib.top_default_BUFF_ASYNC_W2_D1_S0:v
+		errors: 0, warnings: 0
+	module worklib.top_default_BUFF_ASYNC_W3_D1_S0:v
+		errors: 0, warnings: 0
+	module worklib.top_default_BUFF_ASYNC_W4_D1_S0:v
+		errors: 0, warnings: 0
+	module worklib.top_default_BUFF_ASYNC_W5_D1_S0:v
+		errors: 0, warnings: 0
+	module worklib.top_default_BUFF_ASYNC_W12_D1_S0:v
+		errors: 0, warnings: 0
+	module worklib.top_default_CKMUX__W1:v
+		errors: 0, warnings: 0
+file: /home/user2/test22/test2225/exercise/exercise_5/RA1SHD.v
+	module RA1SHD.RA1SHD:v
+		errors: 0, warnings: 0
+		Caching library 'RA1SHD' ....... Done
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+top_default_top top0(
+                   |
+xmelab: *W,CUVWSP (./top_default_tb.v,37|19): 1 output port was not connected:
+xmelab: (./top_default_top.v,155): SYS_1_1_1_Q
+
+top_default_top top0(
+                   |
+xmelab: *W,CUVWSI (./top_default_tb.v,37|19): 6 input ports were not connected:
+xmelab: (./top_default_top.v,150): SYS_1_1_1_A
+xmelab: (./top_default_top.v,151): SYS_1_1_1_D
+xmelab: (./top_default_top.v,152): SYS_1_1_1_CLK
+xmelab: (./top_default_top.v,153): SYS_1_1_1_CEN
+xmelab: (./top_default_top.v,154): SYS_1_1_1_WEN
+xmelab: (./top_default_top.v,156): SYS_1_1_1_OEN
+
+xmelab: *W,DSEMEL: This SystemVerilog design will be simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		worklib.top_default_CKMUX__W1:v <0x76d6b5ad>
+			streams:   1, words:   303
+		worklib.top_default_tcr_1_1_1:v <0x38ffefa3>
+			streams:   4, words:  1195
+		worklib.top_default_tpg_1_1_1:v <0x378d118b>
+			streams:  16, words:  4310
+		worklib.top_default_BUFF_ASYNC_W12_D1_S0:v <0x6c36b449>
+			streams:   2, words:   464
+		worklib.top_default_sequencer1:v <0x1489df36>
+			streams:  13, words:  9612
+		worklib.top_default_BUFF_ASYNC_W1_D1_S1:v <0x20a3f3b3>
+			streams:   2, words:   428
+		worklib.top_default_async_pos_pulse_W1:v <0x500b8ca2>
+			streams:   0, words:     0
+		worklib.top_default_scan:v <0x2c940929>
+			streams:  20, words:  7459
+		worklib.top_default_BUFF_ASYNC_W4_D1_S0:v <0x43047134>
+			streams:   2, words:   449
+		worklib.top_default_BUFF_ASYNC_W2_D1_S0:v <0x6d085f29>
+			streams:   2, words:   449
+		worklib.top_default_BUFF_ASYNC_W5_D1_S0:v <0x18431d8c>
+			streams:   2, words:   449
+		worklib.top_default_BUFF_ASYNC_W3_D1_S0:v <0x364f3391>
+			streams:   2, words:   449
+		worklib.top_default_BUFF_ASYNC_W1_D1_S0:v <0x0256fc34>
+			streams:   2, words:   415
+		worklib.top_default_controller:v <0x0f2ad50f>
+			streams:  27, words: 17903
+		worklib.top_default_top:v <0x493cd98b>
+			streams:   3, words:   467
+		worklib.stimulus:v <0x728d320c>
+			streams:  10, words: 11410
+		RA1SHD.RA1SHD:v <0x5a0a4eab>
+			streams:  17, words: 13754
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                 Instances  Unique
+		Modules:                51      18
+		Primitives:             80       2
+		Timing outputs:         32       1
+		Registers:             176     143
+		Scalar wires:          171       -
+		Expanded wires:         76       3
+		Vectored wires:         42       -
+		Always blocks:          84      51
+		Initial blocks:          3       3
+		Cont. assignments:      43     107
+		Pseudo assignments:      2       2
+		Timing checks:         187       -
+		Simulation timescale:  1ps
+	Writing initial simulation snapshot: worklib.stimulus:v
+Loading snapshot worklib.stimulus:v .................... Done
+xmsim: *W,DSEM2009: This SystemVerilog design is simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+*Verdi* Loading libsscore_ius152.so
+xcelium> source /usr/cad/cadence/XCELIUM/XCELIUM_20.09.007/tools/xcelium/files/xmsimrc
+xcelium> run
+FSDB Dumper for IUS, Release Verdi_N-2017.12, Linux x86_64/64bit, 11/12/2017
+(C) 1996 - 2017 by Synopsys, Inc.
+***********************************************************************
+*  ERROR -                                                            *
+*  The simulator version is newer than the FSDB dumper version which  *
+*  may cause abnormal behavior, please contact Synopsys support for   *
+*  assistance.                                                        *
+***********************************************************************
+*Verdi* : Create FSDB file 'top_default_tb.fsdb'
+*Verdi* : Begin traversing the scope (stimulus), layer (0).
+*Verdi* : End of traversing.
+
+ Test All Result: Pass!
+
+Simulation complete via $finish(1) at time 5748 US + 0
+./top_default_tb.v:88   $finish;
+xcelium> exit
+TOOL:	xmverilog	20.09-s007: Exiting on Dec 06, 2022 at 15:18:41 CST  (total: 00:00:03)

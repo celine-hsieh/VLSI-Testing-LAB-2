@@ -1,0 +1,7 @@
+alias   march_command.alias
+EOT             5'b00000
+>(RaWb)         5'b01011
+>(Wa)           5'b01100
+<(RbWa)         5'b10001
+<(Ra)           5'b11010
+endalias

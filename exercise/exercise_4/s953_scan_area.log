@@ -1,0 +1,31 @@
+ 
+****************************************
+Report : area
+Design : s953
+Version: O-2018.06
+Date   : Tue Dec  6 14:21:51 2022
+****************************************
+
+Information: Updating design information... (UID-85)
+Library(s) Used:
+
+    slow (File: /usr/cad/CBDK/CBDK_IC_Contest_v2.1/SynopsysDC/db/slow.db)
+
+Number of ports:                          190
+Number of nets:                           400
+Number of cells:                          265
+Number of combinational cells:            207
+Number of sequential cells:                29
+Number of macros/black boxes:               0
+Number of buf/inv:                         52
+Number of references:                      61
+
+Combinational area:               1413.934196
+Buf/Inv area:                      190.108797
+Noncombinational area:             935.267368
+Macro/Black Box area:                0.000000
+Net Interconnect area:      undefined  (No wire load specified)
+
+Total cell area:                  2349.201564
+Total area:                 undefined
+1

@@ -1,0 +1,88 @@
+wvSetPosition -win $_nWave1 {("G1" 0)}
+wvOpenFile -win $_nWave1 \
+           {/home/user2/test22/test2225/exercise/exercise_5/mbist/top_default_tb.fsdb}
+wvGetSignalOpen -win $_nWave1
+wvGetSignalSetScope -win $_nWave1 "/stimulus"
+wvGetSignalSetScope -win $_nWave1 "/stimulus/top0"
+wvSetPosition -win $_nWave1 {("G1" 6)}
+wvSetPosition -win $_nWave1 {("G1" 6)}
+wvAddSignal -win $_nWave1 -clear
+wvAddSignal -win $_nWave1 -group {"G1" \
+{/stimulus/top0/top_default_TPG_1_1_1_A_t\[11:0\]} \
+{/stimulus/top0/top_default_TPG_1_1_1_CLK_t} \
+{/stimulus/top0/top_default_TPG_1_1_1_D_t\[31:0\]} \
+{/stimulus/top0/top_default_TPG_1_1_1_OEN_t} \
+{/stimulus/top0/top_default_TPG_1_1_1_Q_t\[31:0\]} \
+{/stimulus/top0/top_default_TPG_1_1_1_WEN_t} \
+}
+wvAddSignal -win $_nWave1 -group {"G2" \
+}
+wvSelectSignal -win $_nWave1 {( "G1" 1 2 3 4 5 6 )} 
+wvSetPosition -win $_nWave1 {("G1" 6)}
+wvSetPosition -win $_nWave1 {("G1" 6)}
+wvSetPosition -win $_nWave1 {("G1" 6)}
+wvAddSignal -win $_nWave1 -clear
+wvAddSignal -win $_nWave1 -group {"G1" \
+{/stimulus/top0/top_default_TPG_1_1_1_A_t\[11:0\]} \
+{/stimulus/top0/top_default_TPG_1_1_1_CLK_t} \
+{/stimulus/top0/top_default_TPG_1_1_1_D_t\[31:0\]} \
+{/stimulus/top0/top_default_TPG_1_1_1_OEN_t} \
+{/stimulus/top0/top_default_TPG_1_1_1_Q_t\[31:0\]} \
+{/stimulus/top0/top_default_TPG_1_1_1_WEN_t} \
+}
+wvAddSignal -win $_nWave1 -group {"G2" \
+}
+wvSelectSignal -win $_nWave1 {( "G1" 1 2 3 4 5 6 )} 
+wvSetPosition -win $_nWave1 {("G1" 6)}
+wvGetSignalClose -win $_nWave1
+wvResizeWindow -win $_nWave1 0 25 1024 695
+wvSelectSignal -win $_nWave1 {( "G1" 4 )} 
+wvCut -win $_nWave1
+wvSetPosition -win $_nWave1 {("G2" 0)}
+wvSetPosition -win $_nWave1 {("G1" 5)}
+wvSetCursor -win $_nWave1 109393740.395459 -snap {("G2" 0)}
+wvSetSearchMode -win $_nWave1 -value 
+wvSetSearchMode -win $_nWave1 -value 4095
+wvSearchNext -win $_nWave1
+wvSetCursor -win $_nWave1 66080482.776952 -snap {("G2" 0)}
+wvZoomIn -win $_nWave1
+wvZoomIn -win $_nWave1
+wvZoomIn -win $_nWave1
+wvZoomIn -win $_nWave1
+wvZoomIn -win $_nWave1
+wvZoomIn -win $_nWave1
+wvZoomIn -win $_nWave1
+wvZoomIn -win $_nWave1
+wvSelectSignal -win $_nWave1 {( "G1" 2 )} 
+wvSelectSignal -win $_nWave1 {( "G1" 2 )} 
+wvSelectSignal -win $_nWave1 {( "G1" 1 )} 
+wvSelectSignal -win $_nWave1 {( "G1" 1 )} 
+wvSetRadix -win $_nWave1 -format UDec
+wvSearchNext -win $_nWave1
+wvZoomIn -win $_nWave1
+wvZoomIn -win $_nWave1
+wvSearchNext -win $_nWave1
+wvZoomOut -win $_nWave1
+wvResizeWindow -win $_nWave1 0 25 1024 695
+wvSearchNext -win $_nWave1
+wvSearchNext -win $_nWave1
+wvSearchNext -win $_nWave1
+wvZoomOut -win $_nWave1
+wvZoomOut -win $_nWave1
+wvZoomIn -win $_nWave1
+wvSearchNext -win $_nWave1
+wvZoomOut -win $_nWave1
+wvSearchPrev -win $_nWave1
+wvSearchPrev -win $_nWave1
+wvZoomIn -win $_nWave1
+wvZoomIn -win $_nWave1
+wvSetCursor -win $_nWave1 2055700436.929597 -snap {("G1" 3)}
+wvSetCursor -win $_nWave1 2055699355.275276 -snap {("G1" 2)}
+wvSetCursor -win $_nWave1 2055751274.682645 -snap {("G1" 2)}
+wvSetCursor -win $_nWave1 2055801030.781373 -snap {("G1" 2)}
+wvSearchPrev -win $_nWave1
+wvSearchPrev -win $_nWave1
+wvSearchNext -win $_nWave1
+wvSearchNext -win $_nWave1
+wvGoToTime -win $_nWave1 2873950000
+wvExit

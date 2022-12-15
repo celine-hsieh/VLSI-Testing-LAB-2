@@ -1,0 +1,79 @@
+define{BIST}[top_default]
+    set BIST_send_test_cmd = MEN
+    set BIST_test_result   = MGO,MRD
+    set WIR_width          = 2
+    set alias_port_name    = no
+    set asynchronous_reset = yes
+    set bist_interface     = basic
+    set bist_run_cycle     = 25291
+    set builtin_alg_select = no
+    set clock_cycle        = 100.0 # ns
+    set fail_memory_info   = no
+    set fail_time_info     = no
+    set gated_clock        = yes
+    set integrator_mode    = yes
+    set max_meb            = 1
+    set only_rom           = no
+    set pattern_gen_cycle  = 0
+    set repair_mode        = no
+    set repair_prefix      = 
+    set retention_cycle    = 25291
+    set scan_in_interface  = no
+    set scan_out_interface = no
+    set sign_width         = 0
+    set skip_bist_block    = 
+    set soft_repair        = yes
+    set test_cmd_width     = 1
+    set top_hierarchy      = top
+    set verilog_path       = /home/user2/test22/test2225/exercise/exercise_5/top.f
+    set work_path          = /home/user2/test22/test2225/exercise/exercise_5/mbistcp
+    
+    define{MEM_FILE_PATH}[top_default]
+        set 0 = /home/user2/test22/test2225/exercise/exercise_5/RA1SHD.v
+    end_define{MEM_FILE_PATH}
+    
+    define{assembler}[top_default]
+        set dedicate_bist_port     = yes
+        set system_clock_name      = top MEM CLK
+        set controller_module_name = top
+        set top_module_name        = top
+        set top_hierarchy          = top
+    end_define{assembler}
+    
+    define{bist_port}[top_default]
+        set MCK  = top_default_MCK
+        set RSTN = top_default_RSTN
+        set SCK  = top_default_SCK
+        set SDI  = top_default_SDI
+        set SDO  = top_default_SDO
+        set SEN  = top_default_SEN
+        set SRST = top_default_SRST
+    end_define{bist_port}
+    
+    # BII flie hookup information table
+    #     interface SCK => define{hookup}[SCK]
+    #     interface SRST => define{hookup}[SRST]
+    #     interface SEN => define{hookup}[SEN]
+    #     interface SDI => define{hookup}[SDI]
+    #     interface SDO => define{hookup}[SDO]
+    #     controller clock => define{hookup}[top_default_MCK]
+    #     BIST reset in => define{hookup}[RSTN]
+end_define{BIST}
+
+define{scan}[top_default]
+    define{scan_out}[MGO]
+        set width = 1
+    end_define{scan_out}
+    
+    define{scan_out}[MRD]
+        set width = 1
+    end_define{scan_out}
+    
+end_define{scan}
+
+define{instance}[top MEM]
+    set memory_module = RA1SHD
+    set clock_port    = CLK
+    set repair_mode   = False
+    set numSRSize     = 0
+end_define{instance}

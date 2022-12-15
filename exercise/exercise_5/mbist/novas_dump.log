@@ -1,0 +1,132 @@
+xmsim(64) 20.09-s007
+Linux 3.10.0-957.21.3.el7.x86_64 #1 SMP Tue Jun 18 16:35:19 UTC 2019 x86_64
+CPU cores: 16
+Limit information:
+======================================
+cputime			unlimited
+filesize		unlimited
+datasize		unlimited
+stacksize		8192 kbytes
+coredumpsize	0 kbytes
+memoryuse		unlimited
+vmemoryuse		unlimited
+descriptors		4096
+memorylocked	64 kbytes
+maxproc			4096
+======================================
+(Special)Runtime environment variables:
+
+Runtime environment variables:
+SOFT_MAN_DIR=/usr/cad/synopsys/coreconsultant/cur/doc/dware/man
+XMODIFIERS=@im=ibus
+SHELL=/bin/tcsh
+installdir=/usr/cad/synopsys/hspice/cur/hspice
+MACHTYPE=x86_64
+LESSOPEN=||/usr/bin/lesspipe.sh %s
+MGC_LOCATION_MAP=NO_MAP
+SSH_CONNECTION=192.168.1.5 40514 192.168.100.10 22
+PATH=/usr/cad/cadence/XCELIUM/XCELIUM_20.09.007/tools/bin/64bit:/usr/cad/cadence/XCELIUM/XCELIUM_20.09.007/tools/bin/64bit:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/cad/Sigasi/eclipse:/usr/cad/Sigasi/eclipse/cur:/opt/RISCV/bin:/usr/cad/HOY/BRAINS/cur/bin:/usr/cad/mentor/Tessent/cur/bin:/usr/cad/mentor/calibre/cur/bin:/usr/cad/cadence/JASPER/jasper_2018.03p001//bin:/usr/cad/cadence/CTOS/cur/tools/bin:/usr/cad/cadence/MMSIM/MMSIM_15.10.801/tools/bin/64bit:/usr/cad/cadence/MMSIM/MMSIM_15.10.801/tools/bin:/usr/cad/cadence/IC/IC_06.17.709//tools/bin:/usr/cad/cadence/IC/IC_06.17.709//tools/dracula/bin:/usr/cad/cadence/IC/IC_06.17.709//tools/dfII/bin:/usr/cad/cadence/IC/IC_06.17.709//tools/bin/64bit:/usr/cad/cadence/IC/IC_06.17.709//tools/dracula/bin/64bit:/usr/cad/cadence/IC/IC_06.17.709//tools/dfII/bin/64bit:/usr/cad/cadence/XCELIUM/XCELIUM_20.09.007/tools/bin/64bit:/usr/cad/cadence/XCELIUM/XCELIUM_20.09.007/tools/bin:/usr/cad/cadence/INCISIV/INCISIVE_15.20.039/tools/bin/64bit:/usr/cad/cadence/INCISIV/INCISIVE_15.20.039/tools/bin:/usr/cad/cadence/EDI/EDI-ISR4_14.24.000_lnx86/tools/bin/64bit:/usr/cad/cadence/EDI/EDI-ISR4_14.24.000_lnx86/tools/bin:/usr/cad/cadence/INNOVUS/INNOVUS_20.10.000//tools/bin/64bit:/usr/cad/cadence/INNOVUS/INNOVUS_20.10.000//tools/bin:/usr/cad/synopsys/tmax/cur/bin:/usr/cad/synopsys/spyglass/cur/SPYGLASS_HOME/bin:/usr/bin/X11:/usr/cad/synopsys/coreconsultant/cur/bin:/usr/cad/synopsys/verdi/cur/bin:/usr/cad/synopsys/verdi/cur/nLint/bin:/usr/bin/X11:/usr/cad/synopsys/primetime/cur/amd64/syn/bin:/usr/bin/X11:/usr/cad/synopsys/primerail/cur/amd64/syn/bin:/usr/cad/synopsys/adp/cur/bin:/usr/cad/synopsys/laker_oa/cur/bin:/usr/cad/synopsys/icvalidator/cur/bin/LINUX64_L31el:/usr/cad/synopsys/star-rcxt/cur/amd64_starrc/bin:/usr/cad/synopsys/laker/cur/bin:/usr/cad/synopsys/customexplorer/cur/bin:/usr/cad/synopsys/hspice/cur/hspice/bin:/usr/cad/synopsys/hspice/cur/hspice/GNU/linux64/gcc/bin:/usr/cad/synopsys/hspice/cur/hspice/linux64:/usr/bin:/usr/ucb/bin:/usr/cad/synopsys/customcompiler/cur/bin:/usr/bin/X11:/usr/cad/synopsys/coreConsultant/cur/bin:/usr/cad/synopsys/synthesis/cur/amd64/syn/bin:/usr/cad/synopsys/lc/cur/bin:/usr/cad/synopsys/lc/cur/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/cad/synopsys_sun/dw_home/cur/bin
+LM_LICENSE_FILE=5280@vlsicad8:26000@lscic:1717@lstn:5280@lstn:26585@lstn:26585@lstc:26585@lshc:26585@lsncku:26585@lscic:
+DESIGNWARE_HOME=/cad/synopsys_sun/dw_home/cur
+PRIMETIME=/usr/cad/synopsys/primetime/cur
+SSH_TTY=/dev/pts/2
+XDG_RUNTIME_DIR=/run/user/1607
+SSH_CLIENT=192.168.1.5 40514 22
+SYNOPSYS_SYSTYPE=LINUX64_L31el
+VENDOR=unknown
+VERIFIC_LICENSE_FILE=/usr/cad/HOY/BRAINS/cur/../../CIC/Verific.dat
+SELINUX_USE_CURRENT_RANGE=
+MGC_TMPDIR=/tmp
+TMIARCH=RH_64
+LS_COLORS=no=00:fi=00:di=00;34;01:ln=00;36:pi=40;33:so=00;35:bd=40;33;01:cd=40;33;01:or=01;05;37;41:mi=01;05;37;41:ex=00;32:*.cmd=00;32:*.exe=00;32:*.com=00;32:*.btm=00;32:*.bat=00;32:*.sh=00;32:*.csh=00;32:*.tar=00;31:*.tgz=00;31:*.arj=00;31:*.taz=00;31:*.lzh=00;31:*.zip=00;31:*.z=00;31:*.Z=00;31:*.gz=00;31:*.bz2=00;31:*.bz=00;31:*.tz=00;31:*.rpm=00;31:*.cpio=00;31:*.jpg=00;35:*.gif=00;35:*.bmp=00;35:*.xbm=00;35:*.xpm=00;35:*.png=00;35:*.tif=00;35:
+SYNOPSYS_TMAX=/usr/cad/synopsys/tmax/cur
+SHLIB_PATH=/usr/cad/synopsys/verdi/cur/etc/lib/libstdc++/LINUX64/
+XAPPLRESDIR=/usr/cad/synopsys/icvalidator/cur/app-defaults
+SG_HTML_BROWSER=/usr/bin/mozilla
+DISPLAY=localhost:12.0
+MGC_HOME=/usr/cad/mentor/calibre/cur
+PWD=/home/user2/test22/test2225/exercise/exercise_5/mbist
+HOY_LIC_FILE=4141@lshc
+MANPATH=/usr/cad/synopsys/synthesis/cur/doc/syn/man:/usr/cad/synopsys/coreconsultant/cur/doc/dware/man
+HOME=/home/user2/test22/test2225
+LD_LIBRARY_PATH=/usr/lib:/usr/lib64:/lib:/lib64:/usr/local/systemc/cur/lib-linux64:/usr/local/systemc/systemc-2.3.1/lib-linux64:::/usr/cad/cadence/CTOS/cur/tools/lib:/usr/cad/cadence/MMSIM/MMSIM_15.10.801/tools/lib/64bit:/usr/cad/cadence/MMSIM/MMSIM_15.10.801/tools/lib64:/usr/cad/cadence/MMSIM/MMSIM_15.10.801/tools/lib:/usr/cad/cadence/IC/IC_06.17.709//tools/lib:/usr/cad/cadence/IC/IC_06.17.709//tools/lib/64bit:/usr/cad/cadence/IC/IC_06.17.709//tools/lib64:/usr/cad/cadence/XCELIUM/XCELIUM_20.09.007/tools/lib/64bit:/usr/cad/cadence/XCELIUM/XCELIUM_20.09.007/tools/lib64:/usr/cad/cadence/XCELIUM/XCELIUM_20.09.007/tools/lib:/usr/cad/cadence/INCISIV/INCISIVE_15.20.039/tools/lib/64bit:/usr/cad/cadence/INCISIV/INCISIVE_15.20.039/tools/lib64:/usr/cad/cadence/INCISIV/INCISIVE_15.20.039/tools/lib:/usr/cad/cadence/EDI/EDI-ISR4_14.24.000_lnx86/tools/lib/64bit:/usr/cad/cadence/EDI/EDI-ISR4_14.24.000_lnx86/tools/lib64:/usr/cad/cadence/EDI/EDI-ISR4_14.24.000_lnx86/tools/lib:/usr/cad/cadence/INNOVUS/INNOVUS_20.10.000//tools/lib/64bit:/usr/cad/cadence/INNOVUS/INNOVUS_20.10.000//tools/lib64:/usr/cad/cadence/INNOVUS/INNOVUS_20.10.000//tools/lib:/usr/cad/synopsys/verdi/cur/etc/lib/libstdc++/LINUX64/:/usr/cad/synopsys/verdi/cur/share/PLI/IUS/LINUX64/://usr/cad/synopsys/hspice/cur/hspice/linux64/interfaces:/lib64:/usr/lib64:/usr/local/lib64:/lib64:/usr/lib64:/usr/local/lib64
+SYN_MAN_DIR=/usr/cad/synopsys/synthesis/cur/doc/syn/man
+LOGNAME=test2225
+SELINUX_LEVEL_REQUESTED=
+SNPS_64=1
+HOSTNAME=vlsicad9
+OSTYPE=linux
+XKEYSYMDB=/usr/cad/synopsys/icvalidator/cur/lib-u/X11/XKeysymDB
+SHLVL=1
+SIM=ncv
+SNPS_PLATFORM=linux64
+MAKEOVERRIDES=${-*-command-variables-*-}
+XDG_SESSION_ID=3670
+USER=test2225
+SYNTHESIS=/usr/cad/synopsys/synthesis/cur
+HSP_GCC=/usr/cad/synopsys/hspice/cur/hspice/GNU/linux64/gcc/bin/gcc -m64 
+REMOTEHOST=192.168.1.5
+Laker_TCL_L3=1
+CDS_LOAD_ENV=CSF
+SYNOPSYS_LC_ROOT=/usr/cad/synopsys/lc/cur
+HSP_GCC_VERSION=5.2.0
+MAKEFLAGS=w -- FUNC=tb SIM=ncv
+MFLAGS=-w
+PRIMERAIL=/usr/cad/synopsys/primerail/cur
+MAIL=/var/spool/mail/test2225
+ICV_HOME_DIR=/usr/cad/synopsys/icvalidator/cur
+CMIARCH=RH_64
+SC_HLPPATH=/usr/cad/synopsys/laker_oa/cur
+Laker_TCL_ToolBox=1
+CDSHOME=/usr/cad/cadence/IC/IC_06.17.709/
+EDITOR=/usr/bin/vim
+FUNC=tb
+HSP_HOME=/usr/cad/synopsys/hspice/cur/hspice
+HOSTTYPE=x86_64-linux
+SELINUX_ROLE_REQUESTED=
+GROUP=student
+XNLSPATH=/usr/cad/synopsys/icvalidator/cur/lib-u/X11/nls
+CDS_Netlisting_Mode=Analog
+mraarch=linux_64
+LANG=en_US.utf8
+TERM=xterm
+HOST=vlsicad9
+MAKELEVEL=2
+_XRUNROOT_=/usr/cad/cadence/XCELIUM/XCELIUM_20.09.007/tools
+_IRUNROOT_=/usr/cad/cadence/XCELIUM/XCELIUM_20.09.007/tools
+CDS_ARCH=lnx86
+ARG_V_Y_IS_USED=1
+XMRUNMODE=xmverilog:./xcelium.d/run.lnx8664.20.09.d
+XRUNBATCH=FALSE
+AMS_LOG_FILE_NAME=top_default_NC.log
+IMPERAS_PORT_FILE=.vsp_ovp_gdb_port
+TCL_LIBRARY=/usr/cad/cadence/XCELIUM/XCELIUM_20.09.007/tools/inca/files/tcl/library
+Runtime command line arguments:
+argv[0]=xmverilog
+argv[1]=+notimingcheck
+argv[2]=+access+r
+argv[3]=+loadpli1=libpli
+argv[4]=+nc64bit
+argv[5]=-ALLOWREDEFINITION
+argv[6]=-sv
+argv[7]=-l
+argv[8]=top_default_NC.log
+argv[9]=top_default_tb.v
+argv[10]=-f
+argv[11]=top_default.f
+argv[12]=-v
+argv[13]=/home/user2/test22/test2225/exercise/exercise_5/RA1SHD.v
+argv[14]=/home/user2/test22/test2225/exercise/exercise_5/mbist/top_default_top.v
+argv[15]=/home/user2/test22/test2225/exercise/exercise_5/mbist/top_default.v
+argv[16]=-clean
+121 profile - 100
+          CPU/Mem usage: 0.070 sys,  0.260 user,  236.42M sys,  0.00M vm
+122 VC callback profile - scalar:0 vector:0
+123 Tue Dec  6 15:09:58 2022
+124 pliAppInit
+125 FSDB_GATE is disabled.
+126 Enable Parallel Dumping.
+127 pliAppMiscSet: New Sim Round
+128 pliEntryInit
+129 LIBSSCORE=found /usr/cad/synopsys/verdi/cur/share/PLI/IUS/LINUX64/libsscore_ius152.so through $LD_LIBRARY_PATH setting.
+130 Sim process exit

@@ -1,0 +1,27 @@
+//
+// File created by:  xmverilog
+// Do not modify this file
+//
++notimingcheck
++access+r
++loadpli1=libpli
++nc64bit
+-MESSAGES
++EMGRLOG
+top_default_NC.log
+-XLSTIME
+1670312711
+-XLKEEP
+-XLMODE
+./xcelium.d/run.lnx8664.20.09.d
+-RUNMODE
+-CDSLIB
+./xcelium.d/run.lnx8664.20.09.d/cds.lib
+-HDLVAR
+./xcelium.d/run.lnx8664.20.09.d/hdl.var
+-XLNAME
+xmverilog
+-XLVERSION
+"TOOL:	xmverilog	20.09-s007"
+-XLNAME
+./xcelium.d/run.lnx8664.20.09.d/vlsicad9_16588
